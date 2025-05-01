@@ -5,28 +5,60 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    printf("\n\n ==== Bem-vindo ao Super Xadrez! ====\n");
+    printf("Powered by Drix\n\n");
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // Título 
+    printf("**Desafio Xadrez - Novato**\n");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    // Movimento da Torre
+   
+    int movimentoTorre = 5;  // A Torre se moverá 5 casas para a direita
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("\nMovimento da Torre:\n");
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    for (int i = 0; i < movimentoTorre; i++) {
+        printf("Direita\n");  // Cada passo representa uma casa para a direita
+    }
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    
+    // Movimento da Rainha
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    int movimentoRainha = 8;  // A Rainha se moverá 8 casas para a esquerda
+    int i = 0;                // Contador para o while
+
+    printf("\nMovimento da Rainha:\n");
+
+    while (i < movimentoRainha) {
+        printf("Esquerda\n");
+        i++;
+    }
+
+
+    // Movimento do Bispo
+
+    int movimentoBispo = 5;
+
+    i = 0; // Utilizando o contador
+
+    printf("\nMovimento do Bispo:\n");
+
+    do {
+        printf("Cima Direita\n");
+        i++;
+    } while (i < movimentoBispo);
+
+
+
+    printf("\n\nSaindo do Super Xadrez!");
+
+    printf("\n\n=================================\n");
+    printf("\n Obrigado por usar o programa!\n");
+    printf("    Powered by Drix\n\n");
+    printf("=================================\n\n");
+
+
+
 
     return 0;
 }
