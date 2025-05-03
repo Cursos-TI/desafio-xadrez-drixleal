@@ -9,7 +9,7 @@ int main() {
     printf("Powered by Drix\n\n");
 
     // Título 
-    printf("**Desafio Xadrez - Novato**\n");
+    printf("**Desafio Xadrez - Aventureiro**\n");
 
     // Movimento da Torre
    
@@ -47,6 +47,25 @@ int main() {
         printf("Cima Direita\n");
         i++;
     } while (i < movimentoBispo);
+
+
+    // Movimento do Cavalo
+
+    int movimentoCavalo = 1;  // O Cavalo se moverá 2 casas para cima e 1 para a direita
+
+    i = 0; // Utilizando o contador
+
+    printf("\nMovimento do Cavalo:\n");
+
+    while (movimentoCavalo--) 
+    {
+        for (i = 0; i < 2; i++) {
+            printf("Cima\n");  // Movimento para cima 2x
+        }
+        printf("Direita\n");  // Movimento para a direita 1x
+
+
+    }
 
 
 
