@@ -4,67 +4,94 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
-    printf("\n\n ==== Bem-vindo ao Super Xadrez! ====\n");
+//RECURSIVIDADE: Torre: A Torre se moverá 5 casas para a direita
+void Torre (int i){
+    if (i < 5)
+    {
+      printf("Direita  \n");
+      Torre(i + 1);
+    }
+}
+//RECURSIVIDADE: Bispo: O Bispo se moverá 5 casas para cima e 1 para a direita
+void Bispo(int i) {
+    if (i > 0) {
+        for (int j = 0; j < 1; j++) 
+        {
+            printf("Cima ");
+            
+        }
+        printf("Direita\n");
+        Bispo(i - 1);
+    }
+}
+//RECURSIVIDADE: Rainha: A Rainha se moverá 8 casas para a esquerda
+void Rainha(int i){
+    if (i <= 8)
+    {
+      printf("Esquerda  \n");
+      Rainha(i + 1);
+    }
+}
+
+int main () {
+    
+    printf("\n\n ==== Bem-vindo ao Super Xadrez! ====\n"); 
     printf("Powered by Drix\n\n");
 
     // Título 
-    printf("**Desafio Xadrez - Aventureiro**\n");
+    printf("**Desafio Xadrez - Mestre**\n");
 
-    // Movimento da Torre
+/*-------------------------------------------------------------------*/
    
-    int movimentoTorre = 5;  // A Torre se moverá 5 casas para a direita
+    // Movimento da Torre
+
+    int Peca1 = 0; // A Torre se moverá 5 casas para a direita
 
     printf("\nMovimento da Torre:\n");
+    Torre(Peca1);
+    
+/*-------------------------------------------------------------------*/
 
-    for (int i = 0; i < movimentoTorre; i++) {
-        printf("Direita\n");  // Cada passo representa uma casa para a direita
-    }
+    // Movimento do Bispo.
+
+    printf("\n");
+
+    int Peca2 = 5;
+    printf("\nMovimento do Bispo:\n"); // O Bispo se moverá 5 casas para cima e 1 para a direita
+    Bispo(Peca2);
 
     
-    // Movimento da Rainha
+/*-------------------------------------------------------------------*/
 
-    int movimentoRainha = 8;  // A Rainha se moverá 8 casas para a esquerda
-    int i = 0;                // Contador para o while
+    // Movimento da Rainha.
 
-    printf("\nMovimento da Rainha:\n");
+    printf("\n");
 
-    while (i < movimentoRainha) {
-        printf("Esquerda\n");
-        i++;
-    }
+        int Peca3 = 1;
+        printf("\nMovimento da Rainha:\n"); // A Rainha se moverá 8 casas para a esquerda
+        Rainha(Peca3);
 
 
-    // Movimento do Bispo
+/*-------------------------------------------------------------------*/        
 
-    int movimentoBispo = 5;
+    // Movimento do Cavalo.
 
-    i = 0; // Utilizando o contador
+        printf("\n");
+        printf("\nMovimento do Cavalo:\n");
 
-    printf("\nMovimento do Bispo:\n");
+        for (int j = 1; j > 0; j--)
+        {
 
-    do {
-        printf("Cima Direita\n");
-        i++;
-    } while (i < movimentoBispo);
+        for(int k = 0; k < 2; k++)
+        {
+            printf("Cima \n");
 
-
-    // Movimento do Cavalo
-
-    int movimentoCavalo = 1;  // O Cavalo se moverá 2 casas para cima e 1 para a direita
-
-    i = 0; // Utilizando o contador
-
-    printf("\nMovimento do Cavalo:\n");
-
-    while (movimentoCavalo--) 
-    {
-        for (i = 0; i < 2; i++) {
-            printf("Cima\n");  // Movimento para cima 2x
         }
-        printf("Direita\n");  // Movimento para a direita 1x
+        
+        printf("Direita  \n");
+        printf("\n");
 
-
+/*-------------------------------------------------------------------*/        
     }
 
 
@@ -75,7 +102,6 @@ int main() {
     printf("\n Obrigado por usar o programa!\n");
     printf("    Powered by Drix\n\n");
     printf("=================================\n\n");
-
 
 
 
